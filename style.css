@@ -1,0 +1,121 @@
+body {
+    margin: 50px 10%;
+    padding: 0 7%;
+    background-color: #F7F6F6;
+    letter-spacing: 1;
+    font-family: 'Raleway', sans-serif;
+    /* fade effect! https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.navbar-brand{
+  font-size: 40px;
+  /* future reference: webkit gradients https://webkit.org/blog/1424/css3-gradients/ */
+  /* cool gradient maker: https://cssgradient.io/ */
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(137,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* text glow https://stackoverflow.com/questions/7061420/how-do-i-animate-a-glowing-effect-on-text */
+#navName {
+  -webkit-transition: text-shadow 0.3s linear;
+  transition: text-shadow 0.3s linear;
+}
+#navName:hover {
+    text-shadow: 0px 0px 6px red; /* can change text glow here */
+}
+
+
+#footerStyle {
+  -webkit-transition: text-shadow 0.3s linear;
+  transition: text-shadow 0.3s linear;
+}
+
+#footerStyle:hover{
+  text-shadow: 0px 0px 1px #00FDFF;
+}
+
+/* Source https://w3bits.com/css-image-hover-zoom/ */
+#hoverZoom {
+  transition: transform 0.2s, filter 0.2s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(100%);
+}
+
+#hoverZoom:hover {
+  filter: brightness(140%);
+  transform: scale(1.1);
+}
+
+#hobbies {
+  width: 85px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: transform 0.2s, filter 0.2s ease-in-out;
+  transform-origin: center center;
+}
+
+#hobbies:hover {
+  transform: scale(2);
+}
+
+.navbar-nav{
+  font-size: 20px;
+}
+
+.nav-link::after{
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #FF0000;
+  transition: width .4s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width .4s;
+}
+
+.introduction {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 0 1.6%;
+}
+
+.images{
+display: block;
+width: 175px;
+margin: 10px;
+border-radius: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+}
+
+
+.footer{
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+}
+
+
+
+.container{
+  margin-top: 5px;
+
+}
+
+.AboutParagraph{
+  font-size: 14px;
+}
+
+#AboutPicture {
+ width: 100%;
+}
